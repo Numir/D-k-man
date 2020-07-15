@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Süleyman /// WP 2019 JS Module 101 - Research Ödev</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgb(248, 230, 196), rgb(148, 150, 158));
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<p>OKTA <br>
+
+  function Oktala() {
+    return (
+      <Route>
+        {console.log("redirect URI = ", window.location.origin)}
+        <Security
+          issuer='https://dev-541013.okta.com/oauth2/default'
+          clientId='0oai72knzUyr1f2uA4x6'
+          redirectUri='http://localhost:3000/giris/callback'
+          pkce={true}
+        >
+          <SecureRoute
+            path='/giris'
+            exact={true}
+            component={Dashboard}
+          />
+          <Route
+            path='/callback'
+            component={LoginCallback}
+          />
+        </Security>
+      </Route>
+
+    );
+  }
+
+</p>
+
+</body>
+
+</html>
